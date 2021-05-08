@@ -1,5 +1,56 @@
 # SEACOAPP
 
+**BAHASA INDONESIA**
+Pra-Instalasi:
+Unduh kode sumber (.zip) dan ekstrak dalam sebuah folder
+contoh: Downloads / SEACOAPP-main
+
+Unduh dan unzip data observasi (CMEMS-data observasi satelit).
+https://drive.google.com/file/d/13XoX2OxtWl-0VAq4kd9hsRXIuOnOdt-5/view?usp=sharing
+Tempatkan file unzip di Downloads / SEACOAPP-main.
+
+Instalasi:
+** Windows **
+1. Pastikan Python 3 diinstal
+2. Buka CMD
+3. ketik "cd Downloads / SEACOAPP-main" pada prompt cmd. (tanpa tanda kutip)
+4. Instal modul yang diperlukan di file reqs.txt
+  
+  ketik:
+  **pip install -r reqs.txt**
+  
+  Saat ini, ada bug di dash-prerenderer.
+  Oleh karena itu, kami menyarankan untuk memasang paksa versi lama dari dash-renderer
+  
+  tulis lagi:
+  **pip install --no-dep dash-renderer==1.1.2 **
+    
+3. Jalankan programnya
+   **python seacoapp.py**
+4. Terminal akan menampilkan link localhost untuk aplikasi tersebut. Salin tautan dan tempel di browser web
+   contoh: http://127.0.0.1:XXXX/
+
+** MAC OSX & UBUNTU **
+1. Pastikan Python 3 diinstal
+2. Buka terminal
+3. Tulis "** cd Downloads / SEACOAPP-main **" di terminal. (tanpa kutipan)
+4. Instal modul yang diperlukan di file reqs.txt
+  
+  menulis:
+  ** pip install -r reqs.txt **
+  
+  Saat ini, ada bug di perender dasbor.
+  Oleh karena itu, kami menyarankan untuk memasang paksa versi lama dari penyaji dasbor
+  
+  tulis lagi:
+  ** pip install --no-dep dash-renderer == 1.1.2 **
+    
+3. Jalankan programnya
+   ** python seacoapp.py **
+4. Terminal akan menampilkan tautan localhost untuk aplikasi tersebut. Salin tautan dan tempel di browser web
+   contoh: http://127.0.0.1:XXXX/
+
+**ENGLISH**
 Pre-Installation:
 Download the source code (.zip) and unpack it in a folder 
 example: Downloads/SEACOAPP-main
