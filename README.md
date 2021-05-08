@@ -25,18 +25,19 @@ Instalasi:
   Oleh karena itu, kami menyarankan untuk memasang paksa versi lama dari dash-renderer
   
   tulis lagi:
-  **pip install --no-dep dash-renderer==1.1.2 **
+  **pip install --no-dep dash-renderer==1.1.2**
     
 3. Jalankan programnya
    **python seacoapp.py**
 4. Terminal akan menampilkan link localhost untuk aplikasi tersebut. Salin tautan dan tempel di browser web
+   
    contoh: http://127.0.0.1:XXXX/
 
 **MAC OSX & UBUNTU**
 
 1. Pastikan Python 3 diinstal
 2. Buka terminal
-3. Tulis "** cd Downloads / SEACOAPP-main **" di terminal. (tanpa kutipan)
+3. Tulis "**cd Downloads / SEACOAPP-main**" di terminal. (tanpa kutipan)
 4. Instal modul yang diperlukan di file reqs.txt
   
   ketik:
@@ -51,6 +52,7 @@ Instalasi:
 3. Jalankan programnya
    **python seacoapp.py**
 4. Terminal akan menampilkan tautan localhost untuk aplikasi tersebut. Salin tautan dan tempel di browser web
+   
    contoh: http://127.0.0.1:XXXX/
 
 **ENGLISH**
@@ -83,6 +85,7 @@ Installation:
 3. Run the program
    **python seacoapp.py**
 4. The terminal will show the localhost link for the app. Copy the link and paste it on web browser
+   
    example : http://127.0.0.1:XXXX/
 
 **MAC OSX & UBUNTU**
@@ -104,4 +107,5 @@ Installation:
 3. Run the program
    **python seacoapp.py**
 4. The terminal will show the localhost link for the app. Copy the link and paste it on web browser
+   
    example : http://127.0.0.1:XXXX/
