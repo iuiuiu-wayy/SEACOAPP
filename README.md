@@ -83,8 +83,7 @@ Installation:
   write:
   **pip install -r reqs.txt**
   
-  Currently, there is a bug in dash-renderer. 
-  Therefore, we recomend to force install older verison of dash-renderer
+  We recommend to force install the older verison of dash-renderer, due to the bug in the newest version.
   
   write again:  
   **pip install --no-dep dash-renderer==1.1.2**
@@ -105,8 +104,7 @@ Installation:
   write:
   **pip install -r reqs.txt**
   
-  Currently, there is a bug in dash-renderer. 
-  Therefore, we recomend to force install older verison of dash-renderer
+  We recommend to force install the older verison of dash-renderer, due to the bug in the newest version.
   
   write again:  
   **pip install --no-dep dash-renderer==1.1.2**
