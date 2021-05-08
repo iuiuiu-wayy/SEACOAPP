@@ -11,7 +11,8 @@ https://drive.google.com/file/d/13XoX2OxtWl-0VAq4kd9hsRXIuOnOdt-5/view?usp=shari
 Tempatkan file unzip di Downloads / SEACOAPP-main.
 
 Instalasi:
-** Windows **
+
+**Windows**
 1. Pastikan Python 3 diinstal
 2. Buka CMD
 3. ketik "cd Downloads / SEACOAPP-main" pada prompt cmd. (tanpa tanda kutip)
@@ -63,6 +64,7 @@ https://drive.google.com/file/d/13XoX2OxtWl-0VAq4kd9hsRXIuOnOdt-5/view?usp=shari
 Place the unzipped file in the Downloads/SEACOAPP-main.
 
 Installation:
+
 **Windows**
 1. Make sure Python 3 is installed
 2. Open CMD
