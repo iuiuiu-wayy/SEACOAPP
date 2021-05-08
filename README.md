@@ -1,6 +1,7 @@
 # SEACOAPP
 
 **BAHASA INDONESIA**
+
 Pra-Instalasi:
 Unduh kode sumber (.zip) dan ekstrak dalam sebuah folder
 contoh: Downloads / SEACOAPP-main
@@ -19,7 +20,7 @@ Instalasi:
   ketik:
   **pip install -r reqs.txt**
   
-  Saat ini, ada bug di dash-prerenderer.
+  Saat ini, ada bug di dash-renderer.
   Oleh karena itu, kami menyarankan untuk memasang paksa versi lama dari dash-renderer
   
   tulis lagi:
@@ -30,27 +31,29 @@ Instalasi:
 4. Terminal akan menampilkan link localhost untuk aplikasi tersebut. Salin tautan dan tempel di browser web
    contoh: http://127.0.0.1:XXXX/
 
-** MAC OSX & UBUNTU **
+**MAC OSX & UBUNTU**
+
 1. Pastikan Python 3 diinstal
 2. Buka terminal
 3. Tulis "** cd Downloads / SEACOAPP-main **" di terminal. (tanpa kutipan)
 4. Instal modul yang diperlukan di file reqs.txt
   
-  menulis:
-  ** pip install -r reqs.txt **
+  ketik:
+  **pip install -r reqs.txt**
   
-  Saat ini, ada bug di perender dasbor.
+  Saat ini, ada bug di dash-renderer.
   Oleh karena itu, kami menyarankan untuk memasang paksa versi lama dari penyaji dasbor
   
   tulis lagi:
-  ** pip install --no-dep dash-renderer == 1.1.2 **
+  **pip install --no-dep dash-renderer == 1.1.2**
     
 3. Jalankan programnya
-   ** python seacoapp.py **
+   **python seacoapp.py**
 4. Terminal akan menampilkan tautan localhost untuk aplikasi tersebut. Salin tautan dan tempel di browser web
    contoh: http://127.0.0.1:XXXX/
 
 **ENGLISH**
+
 Pre-Installation:
 Download the source code (.zip) and unpack it in a folder 
 example: Downloads/SEACOAPP-main
@@ -81,6 +84,7 @@ Installation:
    example : http://127.0.0.1:XXXX/
 
 **MAC OSX & UBUNTU**
+
 1. Make sure Python 3 is installed
 2. Open terminal 
 3. Write "**cd Downloads/SEACOAPP-main**" in the terminal. (without quote)
