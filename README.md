@@ -7,7 +7,7 @@
  * Fadhlil Rizki Muhammad, The University of Melbourne, Australia
  * Akhmad Faqih, IPB University, Indonesia
 
-### **BAHASA INDONESIA**
+## **BAHASA INDONESIA**
 
 Pra-Instalasi:
 Unduh kode sumber (.zip) dan ekstrak dalam sebuah folder
@@ -19,7 +19,7 @@ Tempatkan file unzip di Downloads / SEACOAPP-main.
 
 Instalasi:
 
-**Windows**
+### **Windows**
 1. Pastikan Python 3 diinstal
 2. Buka CMD
 3. ketik "cd Downloads / SEACOAPP-main" pada prompt cmd. (tanpa tanda kutip)
@@ -40,7 +40,7 @@ Instalasi:
    
    contoh: http://127.0.0.1:XXXX/
 
-**MAC OSX & UBUNTU**
+### **MAC OSX & UBUNTU**
 
 1. Pastikan Python 3 diinstal
 2. Buka terminal
@@ -62,7 +62,7 @@ Instalasi:
    
    contoh: http://127.0.0.1:XXXX/
 
-### **ENGLISH**
+## **ENGLISH**
 
 Pre-Installation:
 Download the source code (.zip) and unpack it in a folder 
@@ -74,7 +74,7 @@ Place the unzipped file in the Downloads/SEACOAPP-main.
 
 Installation:
 
-**Windows**
+### **Windows**
 1. Make sure Python 3 is installed
 2. Open CMD
 3. Write "cd Downloads/SEACOAPP-main" in the cmd prompt. (without quote)
@@ -95,7 +95,7 @@ Installation:
    
    example : http://127.0.0.1:XXXX/
 
-**MAC OSX & UBUNTU**
+### **MAC OSX & UBUNTU**
 
 1. Make sure Python 3 is installed
 2. Open terminal 
