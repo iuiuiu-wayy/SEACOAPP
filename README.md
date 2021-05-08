@@ -3,9 +3,9 @@
 ## Southeast Asia Climate-Ocean Web App 
 
 ### Developed by:
-  Imam Wahyu Amanullah, Universiti Teknikal Melaka Malaysia, Malaysia
-  Fadhlil Rizki Muhammad, The University of Melbourne, Australia
-  Akhmad Faqih, IPB University, Indonesia
+ * Imam Wahyu Amanullah, Universiti Teknikal Melaka Malaysia, Malaysia
+ * Fadhlil Rizki Muhammad, The University of Melbourne, Australia
+ * Akhmad Faqih, IPB University, Indonesia
 
 **BAHASA INDONESIA**
 
