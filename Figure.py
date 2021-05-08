@@ -62,6 +62,7 @@ def call_figure(app):
         if n_clicks is None:
             raise PreventUpdate
 
+        app.downloadable = False
         # print(args)
         ######## modelll
         CLIMCHANGE_INPUT = "http://tides.big.go.id:8080/thredds/dodsC/InaROMS/InaROMS_rcp45_2006_2040.nc"
@@ -69,6 +70,9 @@ def call_figure(app):
         latitudes = dataset.variables['LAT'][:] 
         longitudes = dataset.variables['LON'][:]
         lats, latn, lonl, lonr, mode, options, YStart, YEnd, YOutStart, YOutEnd, var = args
+        app.var_units = dataset[var].units
+        app.var_long_name= dataset[var].long_name
+        app.args = args
         app.mode = mode
         app.options = options
 
@@ -130,6 +134,10 @@ def call_figure(app):
             agg_obs_label, agg_obs_data = daily2morthlyyearly(options, int(YStart), int(YEnd), obsdata)
             app.agg_obs_data = np.array(agg_obs_data)
             obs_lat, obs_lon = np.meshgrid(lons_obs[lonli_obs:lonui_obs],lats_obs[latli_obs:latui_obs])
+
+            app.obs_latitudes = lats_obs[latli_obs:latui_obs]
+            app.obs_longitudes = lons_obs[lonli_obs:lonui_obs]
+
             app.agg_obs_label = agg_obs_label
             app.obs_lat = obs_lat.flatten().data
             app.obs_lon = obs_lon.flatten().data
@@ -145,6 +153,8 @@ def call_figure(app):
 
 
         lon, lat = np.meshgrid(longitudes[lonli:lonui],latitudes[latli:latui])
+        app.longitudes=longitudes[lonli:lonui]
+        app.latitudes=latitudes[latli:latui]
 
         lon = lon.flatten().data
         lat = lat.flatten().data
@@ -272,7 +282,7 @@ def call_figure(app):
                 clearable=False,
             )
         app.second_call = False
-
+        app.downloadable=True
         return fig, div
 
 
@@ -307,25 +317,67 @@ def call_figure(app):
         if app.options == 'monthly':
             ######## calculate monthly climatology
             raw_montly = app.agg_data.mean(1).mean(1)
-            monthly_clim = []
+            monthly_clim = list()
+            spatial_monthly_clim = list()
+            
             for i in range(12):
                 tmp_data = []
-                for j in range(i,len(raw_montly), 12):
+                for j in range(i, len(raw_montly), 12):
+                    
                     tmp_data.append(raw_montly[j])
                 tmp_data = np.array(tmp_data)
                 monthly_clim.append(tmp_data.mean())
+
+                spatial_tmp = list()
+                # print('agg_data', app.agg_data.shape)
+                # print('i index data', app.agg_data.shape[0])
+                # test_tmp = list()
+                n_index = app.agg_data.shape[0]
+                # makii = app.agg_data[0,:,:]
+                # test_tmp.append(makii)
+                # test_tmp.append(makii)
+                # print('test_tmp', test_tmp)
+                # print('test_tmp_array', np.array(test_tmp).shape)
+                # print('sample data luar',makii)
+                for j2 in range(i, n_index, 12):
+                    # print('setelah masuk loop')
+                    # print('j ini', j2)
+                # makii = [[0,0],[0,0]]
+                    makii = app.agg_data[j,:,:]
+                    spatial_tmp.append(makii)
+                # spatial_tmp.append()
+                # print(n_index, 'n index')
+                # print('sample data',makii)
+                spatial_tmp = np.array(spatial_tmp)
+                
+                spatial_monthly_clim.append(spatial_tmp.mean(0))
+            #     print('spatial_tmp', spatial_tmp)
+            # print('spatial_montly_clim', len(spatial_monthly_clim), spatial_monthly_clim[-1].shape)
+            # print('agg_data shpae', app.agg_data.shape)
+
             monthly_clim = np.array(monthly_clim)
+            app.monthly_clim = monthly_clim
+            app.spatial_monthly_clim = np.array(spatial_monthly_clim)
+
 
             if app.mode == 'modelcorrection':
                 raw_base_montly = app.agg_obs_data.mean(1).mean(1)
                 base_monthly_clim = []
+                base_spatial_montly_clim = list()
                 for i in range(12):
                     base_tmp_data = []
+                    base_tmp_spatial = []
                     for j in range(i,len(raw_base_montly), 12):
                         base_tmp_data.append(raw_base_montly[j])
+                        base_tmp_spatial.append(app.agg_obs_data[j,:,:])
                     base_tmp_data = np.array(base_tmp_data)
                     base_monthly_clim.append(base_tmp_data.mean())
+
+                    base_tmp_spatial = np.array(base_tmp_spatial)
+                    base_spatial_montly_clim.append(base_tmp_spatial.mean(0))
                 base_monthly_clim = np.array(base_monthly_clim)
+                app.base_spatial_montly_clim = np.array(base_spatial_montly_clim)
+                # print('random check ', app.base_spatial_montly_clim.shape)
 
         if right_dropdown == 'trend':
             plot_array = app.res_a.flatten()
@@ -446,4 +498,5 @@ def call_figure(app):
                     zoom=5
                 ),
             )
+        app.downloadable=True
         return fig
