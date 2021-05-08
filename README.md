@@ -7,7 +7,7 @@
  * Fadhlil Rizki Muhammad, The University of Melbourne, Australia
  * Akhmad Faqih, IPB University, Indonesia
 
-**BAHASA INDONESIA**
+### **BAHASA INDONESIA**
 
 Pra-Instalasi:
 Unduh kode sumber (.zip) dan ekstrak dalam sebuah folder
@@ -62,7 +62,7 @@ Instalasi:
    
    contoh: http://127.0.0.1:XXXX/
 
-**ENGLISH**
+### **ENGLISH**
 
 Pre-Installation:
 Download the source code (.zip) and unpack it in a folder 
