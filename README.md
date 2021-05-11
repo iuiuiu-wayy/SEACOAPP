@@ -114,3 +114,7 @@ Installation:
 4. The terminal will show the localhost link for the app. Copy the link and paste it on web browser
    
    example : http://127.0.0.1:XXXX/
+
+## NCL Version
+
+https://github.com/fadhlilRmuhammad/ReGISFEST2020/releases/tag/IndoSLR-v2.0
