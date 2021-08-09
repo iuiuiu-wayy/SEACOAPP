@@ -50,4 +50,4 @@ call_figure(dash_app)
 Export_window_Callbacks(dash_app)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
